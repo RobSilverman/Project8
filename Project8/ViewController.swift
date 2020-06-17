@@ -219,6 +219,8 @@ class ViewController: UIViewController {
         
         solutions.removeAll(keepingCapacity: true)
         
+        loadLevel()
+        
         for btn in letterButtons {
             btn.isHidden = false
         }
