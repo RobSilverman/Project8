@@ -75,6 +75,8 @@ class ViewController: UIViewController {
         
         let buttonView = UIView()
         buttonView.translatesAutoresizingMaskIntoConstraints = false
+        buttonView.layer.borderWidth = 1
+        buttonView.layer.borderColor = UIColor.lightGray.cgColor
         view.addSubview(buttonView)
         
         for row in 0..<4 {
@@ -161,6 +163,10 @@ class ViewController: UIViewController {
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(ac, animated: true)
             }
+        } else {
+            let ac = UIAlertController(title: "Incorrect Answer", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true)
         }
     }
     
